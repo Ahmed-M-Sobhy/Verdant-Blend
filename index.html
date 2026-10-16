@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verdant Blend Coffee Co. - Pure Organic Brews</title>
+  <link rel="stylesheet" href="./Css/style.css">
+  
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <a href="#" class="brand-logo">
+      <i class="fa-solid fa-leaf"></i>
+      Verdant<span>Blend</span>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#about">Our Story</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <button class="cart-btn" onclick="openCart()">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span>Cart</span>
+        <span class="cart-badge" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <div class="hero-subtitle">Organic. Smooth. Natural.</div>
+      <h1 class="hero-title">Experience Coffee <span>Like Never Before</span></h1>
+      <p class="hero-description">Handcrafted botanically infused coffee & matcha made from ethically sourced organic beans, brewed to perfection for your wellness.</p>
+      
+      <div class="hero-buttons">
+        <a href="#menu" class="btn-gold">Explore Menu <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#about" class="btn-outline"><i class="fa-regular fa-circle-play"></i> Our Story</a>
+      </div>
+
+      <div class="hero-badges">
+        <div class="badge-item"><i class="fa-solid fa-seedling"></i> 100% Organic</div>
+        <div class="badge-item"><i class="fa-solid fa-fire-flame-curved"></i> Expertly Roasted</div>
+        <div class="badge-item"><i class="fa-solid fa-heart"></i> Crafted with Love</div>
+      </div>
+    </div>
+
+    <div class="hero-image-wrapper">
+      <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80" alt="Specialty Emerald Coffee" class="hero-img">
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=800&q=80" alt="Coffee Crafting" class="about-img">
+    <div class="about-content">
+      <h2>More Than Just <span>a Coffee</span></h2>
+      <p>At Verdant Blend, we believe coffee is an botanical experience. Every cup we serve combines organic coffee beans with natural herbal purity.</p>
+      
+      <ul class="feature-list">
+        <li><i class="fa-solid fa-check"></i> Sustainably Sourced</li>
+        <li><i class="fa-solid fa-check"></i> Ethically Traded</li>
+        <li><i class="fa-solid fa-check"></i> Freshly Roasted</li>
+        <li><i class="fa-solid fa-check"></i> Barista Crafted</li>
+      </ul>
+
+      <a href="#menu" class="btn-gold">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <!-- Popular Picks -->
+  <section class="picks-section" id="menu">
+    <div class="section-tag">Our Signature</div>
+    <h2 class="section-title">Popular Picks</h2>
+
+    <div class="products-grid">
+      <!-- Product 1 -->
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&w=600&q=80" alt="Matcha Latte" class="product-img">
+        <h3 class="product-title">Iced Matcha Latte</h3>
+        <p class="product-desc">Pure ceremonial grade matcha blended with chilled oat milk.</p>
+        <div class="product-bottom">
+          <span class="price">$5.99</span>
+          <button class="add-btn" onclick="addToCart('Iced Matcha Latte', 5.99, 'https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&w=600&q=80')"><i class="fa-solid fa-plus"></i></button>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=600&q=80" alt="Emerald Cappuccino" class="product-img">
+        <h3 class="product-title">Emerald Cappuccino</h3>
+        <p class="product-desc">Classic espresso with rich botanical foam and pistachio dust.</p>
+        <div class="product-bottom">
+          <span class="price">$4.89</span>
+          <button class="add-btn" onclick="addToCart('Emerald Cappuccino', 4.89, 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=600&q=80')"><i class="fa-solid fa-plus"></i></button>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?auto=format&fit=crop&w=600&q=80" alt="Dark Mint Mocha" class="product-img">
+        <h3 class="product-title">Dark Mint Mocha</h3>
+        <p class="product-desc">Espresso infused with dark cocoa and organic mint extract.</p>
+        <div class="product-bottom">
+          <span class="price">$5.49</span>
+          <button class="add-btn" onclick="addToCart('Dark Mint Mocha', 5.49, 'https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?auto=format&fit=crop&w=600&q=80')"><i class="fa-solid fa-plus"></i></button>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&w=600&q=80" alt="Botanical Espresso" class="product-img">
+        <h3 class="product-title">Botanical Espresso</h3>
+        <p class="product-desc">Strong, bold single-origin espresso shot with cardamom notes.</p>
+        <div class="product-bottom">
+          <span class="price">$3.99</span>
+          <button class="add-btn" onclick="addToCart('Botanical Espresso', 3.99, 'https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&w=600&q=80')"><i class="fa-solid fa-plus"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Info Bar -->
+  <div class="info-bar">
+    <div class="info-item">
+      <i class="fa-solid fa-truck-fast"></i>
+      <div>
+        <h4>Free Delivery</h4>
+        <p>On orders above $25</p>
+      </div>
+    </div>
+    <div class="info-item">
+      <i class="fa-solid fa-clock"></i>
+      <div>
+        <h4>Fresh & Fast</h4>
+        <p>Prepared with care</p>
+      </div>
+    </div>
+    <div class="info-item">
+      <i class="fa-solid fa-shield-halved"></i>
+      <div>
+        <h4>Secure Payment</h4>
+        <p>100% safe checkout</p>
+      </div>
+    </div>
+    <div class="info-item">
+      <i class="fa-solid fa-gift"></i>
+      <div>
+        <h4>Loyalty Rewards</h4>
+        <p>Earn points on every order</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shopping Cart Side Drawer -->
+  <div class="cart-overlay" id="cartOverlay">
+    <div class="cart-drawer">
+      <div class="cart-header">
+        <h3>Your Shopping Bag</h3>
+        <button class="close-cart" onclick="closeCart()"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="cart-body" id="cartItemsContainer">
+        <p class="empty-cart-msg">Your cart is currently empty.</p>
+      </div>
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span>Total:</span>
+          <span id="cartTotalPrice">$0.00</span>
+        </div>
+        <button class="btn-gold" style="width: 100%; justify-content: center;" onclick="checkout()">Proceed to Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a href="#" class="brand-logo" style="margin-bottom: 15px;">
+          <i class="fa-solid fa-leaf"></i>
+          Verdant<span>Blend</span>
+        </a>
+        <p style="color: var(--text-muted); font-size: 12px;">Crafting organic coffee & herbal brews designed to energize your body naturally.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#menu">Our Menu</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Customer Care</h4>
+        <ul>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Shipping & Delivery</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Stay Connected</h4>
+        <p style="color: var(--text-muted); font-size: 12px;">Subscribe for exclusive offers and updates.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed to Verdant Blend!');">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Verdant Blend Coffee Co. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+  <script src="./Js/main.js"></script>
+</body>
+</html>
